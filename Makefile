@@ -1,5 +1,5 @@
 CXX		= g++ -std=c++20
-INCLUDES	= -I . -I miniz
+INCLUDES	= -I. -I./miniz -I./include
 CXXFLAGS  	+= -Wall 
 
 LDFLAGS 	= -pthread -fopenmp
@@ -16,9 +16,9 @@ TARGETS		= minizseq minizparallel
 
 all		: $(TARGETS)
 
-minizseq	: minizseq.cpp cmdline.hpp utility.hpp
+minizseq	: minizseq.cpp ./include/cmdline.hpp ./include/utility.hpp
 
-minizparallel : minizparallel.cpp cmdline.hpp utility.hpp utilitypar.hpp
+minizparallel : minizparallel.cpp ./include/cmdline.hpp ./include/utility.hpp ./include/utilitypar.hpp
 
 clean		: 
 	rm -f $(TARGETS) 

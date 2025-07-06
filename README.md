@@ -66,3 +66,6 @@ The implementation uses the DEFLATE algorithm through Miniz with the following o
 # Compress with specific thread count
 ./parallel_compressor -t 8 -r 1 /data/directory
 ```
+
+## Report
+A report with the implementation details and results can be found [here](miniz-report.pdf).
