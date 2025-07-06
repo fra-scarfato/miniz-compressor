@@ -1,0 +1,12 @@
+4 Threads
+Parallel 5.026272 s
+Exiting with Success
+8 Threads
+Parallel 2.675646 s
+Exiting with Success
+16 Threads
+Parallel 2.696441 s
+Exiting with Success
+32 Threads
+Parallel 2.710757 s
+Exiting with Success
