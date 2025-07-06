@@ -43,7 +43,11 @@ The implementation uses the DEFLATE algorithm through Miniz with the following o
 ### Basic Usage
 
 ```bash
-./parallel_compressor [options] <files/directories>
+# Sequential version
+./minizseq [options] <files/directories>
+
+# Parallel version
+./minizparallel [options] <files/directories>
 ```
 
 ### Command Line Options
@@ -53,19 +57,6 @@ The implementation uses the DEFLATE algorithm through Miniz with the following o
 - `-b <size>`: Block size for large file processing in KB (default: 1024)
 - `-t <threads>`: Number of threads to use (default: auto-detect)
 - `-s <size>`: Small file threshold in KB (default: 512)
-
-### Examples
-
-```bash
-# Compress all files in directory with subdirectories
-./parallel_compressor -r 1 -C 0 /path/to/directory
-
-# Compress specific files with custom block size
-./parallel_compressor -b 2048 file1.dat file2.dat
-
-# Compress with specific thread count
-./parallel_compressor -t 8 -r 1 /data/directory
-```
 
 ## Report
 A report with the implementation details and results can be found [here](miniz-report.pdf).
